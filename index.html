@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Nana Ama McBrown • Onua Showtime • Orphage Support</title>
+    <!-- Font Awesome 6 (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Paystack inline script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- ===== HERO IMAGE: Her Excellency Nana Ama McBrown ===== -->
+    <div class="hero-image">
+        <!-- Direct image source from IMDb -->
+        <img src="data:image/jpeg;base64,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"
+             alt="Her Excellency Nana Ama McBrown - Ghanaian Actress"
+             onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%231e6d6b%22%2F%3E%3Ctext%20x%3D%22150%22%20y%3D%22200%22%20font-size%3D%2230%22%20fill%3D%22%23fff%22%3ENana Ama McBrown%3C%2Ftext%3E%3C%2Fsvg%3E';">
+    </div>
+
+    <!-- Profile Header (Small Avatar) -->
+    <div class="profile-host">
+        <img src="data:image/jpeg;base64,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" alt="Nana Ama McBrown" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2238%22%20fill%3D%22%231e6d6b%22%2F%3E%3Ctext%20x%3D%2220%22%20y%3D%2255%22%20fill%3D%22%23fff%22%20font-size%3D%2218%22%3EMcBrown%3C%2Ftext%3E%3C%2Fsvg%3E';">
+        <div class="host-details">
+            <h2>Nana Ama McBrown</h2>
+            <p><i class="fas fa-tv"></i> Onua Showtime · Backyard Kitchen</p>
+            <span class="program-tag"><i class="fas fa-heart"></i> Scholarships · Orphanage Support</span>
+        </div>
+    </div>
+
+    <!-- SCHOLARSHIP SECTION -->
+    <div class="section-title"><i class="fas fa-graduation-cap"></i> Free scholarship</div>
+    <div class="card">
+        <div class="price-badge"><i class="fas fa-cedi-sign"></i> GHS 50 participation</div>
+        <form id="scholarshipForm">
+            <div class="form-group">
+                <label><i class="far fa-user"></i> Full name</label>
+                <input type="text" id="schName" placeholder="e.g. Adwoa Mensah" required>
+            </div>
+            <div class="form-group">
+                <label><i class="far fa-envelope"></i> Email</label>
+                <input type="email" id="schEmail" placeholder="adwoa@example.com" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-phone-alt"></i> Phone (Ghana)</label>
+                <input type="tel" id="schPhone" placeholder="054 XXX XXXX" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-map-pin"></i> Region</label>
+                <select id="schRegion">
+                    <option>Greater Accra</option>
+                    <option>Ashanti</option>
+                    <option>Western</option>
+                    <option>Eastern</option>
+                    <option>Volta</option>
+                    <option>Central</option>
+                    <option>Northen </option>
+                    <option>Savanah</option>
+                </select>
+            </div>
+            <div class="paystack-badge"><i class="fas fa-lock"></i> Pay via Paystack (GHS)</div>
+            <button type="button" class="btn" id="paystackScholarshipBtn"><i class="fas fa-credit-card"></i> Pay GHS 50 with Paystack</button>
+            <p class="small-note"><i class="fas fa-check-circle"></i> Scholarship + Backyard Kitchen entry.</p>
+        </form>
+    </div>
+
+    <!-- ONUA SHOWTIME TICKET SECTION -->
+    <div class="section-title"><i class="fas fa-tv"></i> Onua Showtime ticket</div>
+    <div class="card">
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.8rem;">
+            <span style="background: #1e3a3f; color: #f5efe7; padding:0.3rem 1.2rem; border-radius:40px;"><i class="fas fa-calendar-alt"></i>Fridays & Sundays 8pm · Onua TV</span>
+            <span style="background:#f0e5db; color:#1e3a3f; padding:0.3rem 1rem; border-radius:50px;"><i class="fas fa-utensils"></i> Backyard Kitchen</span>
+        </div>
+        <div class="ticket-selector">
+            <label><i class="fas fa-ticket-alt"></i> Choose ticket</label>
+            <select id="ticketType">
+                <option value="200">Standard – GHS 200 (1 entry + recipe book)</option>
+                <option value="450">VIP – GHS 450 (3 entries + kitchen tour)</option>
+                <option value="700">Family – GHS 700 (5 entries + meet & greet)</option>
+            </select>
+            <div style="display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="flex:1;">
+                    <label><i class="fas fa-sort-numeric-up"></i> Qty</label>
+                    <input type="number" id="ticketQty" min="1" max="20" value="1">
+                </div>
+                <div style="font-size: 2rem; font-weight:700; color:#1e6d6b;" id="totalDisplay">GHS 30</div>
+            </div>
+        </div>
+        <div class="form-group" style="margin-top: 1.5rem;">
+            <label><i class="fas fa-mobile-alt"></i> Phone for e-ticket</label>
+            <input type="tel" id="ticketPhone" placeholder="024 XXX XXXX">
+        </div>
+        <button class="btn btn-secondary" id="paystackTicketBtn"><i class="fas fa-ticket-alt"></i> Pay with Paystack (GHS)</button>
+        <p class="small-note"><i class="fas fa-video"></i> You'll receive Onua Showtime access.</p>
+    </div>
+
+    <!-- ORPHANAGE SUPPORT (DONATE - any amount) -->
+    <div class="section-title"><i class="fas fa-heart" style="color:#c65757;"></i> Donate to orphanages</div>
+    <div class="card" style="border-left: 5px solid #c6a15b;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <span class="orphan-heart"><i class="fas fa-hand-holding-heart"></i> Any amount</span>
+        </div>
+        <p style="margin-bottom: 1rem;">Support children's homes. Enter any amount (GHS) you wish to donate.</p>
+        <div style="background: #f5f3eb; border-radius: 40px; padding: 1.2rem;">
+            <div class="form-group">
+                <label><i class="fas fa-hand-holding-usd"></i> Amount (GHS) *</label>
+                <input type="number" id="customDonation" min="1" step="0.01" placeholder="GHS" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Your name (optional)</label>
+                <input type="text" id="donorName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email (for receipt) *</label>
+                <input type="email" id="donorEmail" placeholder="your@email.com" required>
+            </div>
+            <div style="margin: 1rem 0 0.5rem; font-size: 1.2rem; font-weight:600; color: #1e6d6b;" id="donationTotalDisplay">Enter amount above</div>
+            <button class="btn btn-orphan" id="paystackOrphanBtn"><i class="fas fa-heart"></i> Donate with Paystack</button>
+            <p class="small-note"><i class="fas fa-check-circle"></i> 100% to orphanages · receipt issued</p>
+        </div>
+    </div>
+
+    <!-- ORPHANAGE SUPPORT (APPLY FOR HELP - GHS 50) -->
+    <div class="section-title"><i class="fas fa-hands-helping" style="color:#1e4a6f;"></i> Apply for orphanage support</div>
+    <div class="card" style="border-left: 5px solid #1e6d6b;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <span class="apply-badge"><i class="fas fa-file-signature"></i> GHS 50 application fee</span>
+        </div>
+        <p style="margin-bottom: 1rem;">If you or an orphanage you know needs help, apply here. The GHS 50 fee covers processing.</p>
+        <div style="background: #eaf0fa; border-radius: 40px; padding: 1.2rem;">
+            <form id="orphanApplyForm">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Your full name</label>
+                    <input type="text" id="applyName" placeholder="e.g. Yaw Asare" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email address</label>
+                    <input type="email" id="applyEmail" placeholder="yaw@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-phone-alt"></i> Phone (Ghana)</label>
+                    <input type="tel" id="applyPhone" placeholder="024 XXX XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-pin"></i> Location of orphanage/need</label>
+                    <input type="text" id="applyLocation" placeholder="e.g. Osu Children's Home, Accra" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-comment"></i> Brief description of help needed</label>
+                    <textarea id="applyMessage" rows="2" placeholder="e.g.money, need food, school supplies, medical support..." required></textarea>
+                </div>
+                <div class="paystack-badge"><i class="fas fa-lock"></i> Pay GHS 50 application fee via Paystack</div>
+                <button type="button" class="btn btn-apply" id="paystackApplyBtn"><i class="fas fa-paper-plane"></i> Pay GHS 50 & submit application</button>
+            </form>
+            <p class="small-note"><i class="fas fa-check-circle"></i> After payment, we'll review and contact you.</p>
+        </div>
+    </div>
+
+    <!-- PROMOTION PARTICIPATION (free) -->
+    <div class="section-title"><i class="fas fa-bullhorn"></i> Join the promotion to win</div>
+    <div class="card" style="background: #f5f3eb;">
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem;">
+            <i class="fas fa-tv" style="font-size:2rem; color:#1e6d6b;"></i>
+            <span style="font-weight:700; font-size:1.2rem; color:#1e3a3f;">Onua TV / Backyard Kitchen</span>
+        </div>
+        <p style="margin-bottom:1.5rem;">Participate in the live show promotion with Nana Ama McBrown. Fill in your details below to register (no payment required).</p>
+        <form id="promoForm">
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Full name</label>
+                <input type="text" id="promoName" placeholder="e.g. Kwame Asante" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-map-marker-alt"></i> Location (city/region)</label>
+                <input type="text" id="promoLocation" placeholder="e.g. Kumasi, Ashanti" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-phone-alt"></i> Phone number (Ghana)</label>
+                <input type="tel" id="promoPhone" placeholder="055 XXX XXXX" required>
+            </div>
+            <button type="button" class="btn btn-secondary" id="promoSubmitBtn"><i class="fas fa-paper-plane"></i> Register for promotion</button>
+        </form>
+        <p class="small-note" style="margin-top:1rem;"><i class="fas fa-check-circle"></i> You'll be contacted if selected for the show.</p>
+    </div>
+
+    <!-- COMMENT SECTION -->
+    <div class="comment-section">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+            <i class="fas fa-comments" style="font-size: 1.8rem; color: #c6a15b;"></i>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a3f;">Comments (10+ messages)</h3>
+        </div>
+        <p style="color: #5f6d6e; margin-bottom: 1rem;">Leave a message for Empress Nana Ama McBrown <i class="fas fa-trash"></i></p>
+
+        <div class="comment-input-area">
+            <input type="text" id="commentAuthor" placeholder="Your name (required)" style="flex: 1;">
+        </div>
+        <div class="comment-input-area" style="margin-top: 0;">
+            <textarea id="commentText" placeholder="Write your message... (required)" style="flex: 1;"></textarea>
+        </div>
+        <button class="comment-btn" id="postCommentBtn"><i class="fas fa-paper-plane"></i> Post comment</button>
+
+        <div class="comment-list" id="commentListContainer">
+            <!-- 25 pre-loaded comments will be populated by JavaScript -->
+        </div>
+        <p style="font-size:0.8rem; margin-top:1rem; color:#b1624b;"><i class="fas fa-shield-alt"></i></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-info">
+        <p>© Empress Nana Ama McBrown<br>
+        <p>For More Enquires Contact 0503202842</p>
+        <span style="font-size:0.7rem;">Orphanage Support </span></p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    (function() {
+        // ========== COMMENT DATA (25 pre-loaded comments) ==========
+        const sampleComments = [
+            { author: "Akua Serwaa", text: "God bless you Empress! This scholarship will change lives 🙏", time: "2 minutes ago" },
+            { author: "Kojo Asante", text: "I love Onua Showtime! Backyard Kitchen is my favourite segment.", time: "5 minutes ago" },
+            { author: "Esi Mansa", text: "How do I apply for the orphanage support? I know a home in Cape Coast.", time: "12 minutes ago" },
+            { author: "Nana Yaw", text: "Nana Ama is a true queen! Thanks for helping the children.", time: "18 minutes ago" },
+            { author: "Adwoa Boateng", text: "I paid my 50 GHS for scholarship, God bless you.", time: "25 minutes ago" },
+            { author: "Kwabena Kesse", text: "Backyard Kitchen is the best thing on TV right now 🔥", time: "32 minutes ago" },
+            { author: "Maame Efua", text: "I want to donate to the orphanage. Where can I send items?", time: "41 minutes ago" },
+            { author: "Kofi Atta", text: "Empress, you are an inspiration to all young girls.", time: "55 minutes ago" },
+            { author: "Abena Nyarko", text: "Just joined the promotion, hope to be on TV!", time: "1 hour ago" },
+            { author: "Yaw Ofori", text: "The new website is beautiful. Nana Ama we love you ❤️", time: "1 hour ago" },
+            { author: "Akosua Manu", text: "Will the scholarship cover university fees?", time: "1 hour ago" },
+            { author: "Kwame Adu", text: "Just donated 100 GHS to orphanages. God bless.", time: "2 hours ago" },
+            { author: "Ama Serwah", text: "Onua TV is the best. Love the Saturday show.", time: "2 hours ago" },
+            { author: "Nana Akua", text: "I applied for the orphanage help. Thank you for this opportunity.", time: "3 hours ago" },
+            { author: "Kweku Ansah", text: "How can I get tickets for the show?", time: "3 hours ago" },
+            { author: "Efua Sackey", text: "I love Nana Ama's cooking segments. So inspiring.", time: "4 hours ago" },
+            { author: "Yaw Boakye", text: "I paid for my scholarship but haven't received confirmation.", time: "5 hours ago" },
+            { author: "Adjoa Acheampong", text: "The orphanage support is such a noble cause.", time: "5 hours ago" },
+            { author: "Kwesi Pratt", text: "Empress, please come to Northern Region for a show!", time: "6 hours ago" },
+            { author: "Maame Akua", text: "I love the new website. Very easy to use.", time: "7 hours ago" },
+            { author: "Nana Ama fan", text: "God bless you for helping the children.", time: "8 hours ago" },
+            { author: "Kofi Mensah", text: "I registered for the promotion. Hope I get selected!", time: "9 hours ago" },
+            { author: "Abena Osei", text: "The Paystack payments are very smooth. Good job.", time: "10 hours ago" },
+            { author: "Yaw Sarpong", text: "I want to support the orphanage every month. Any subscription?", time: "11 hours ago" },
+            { author: "Akua Frimpomaa", text: "Nana Ama McBrown is the best thing to happen to Ghana TV ❤️", time: "12 hours ago" }
+        ];
+
+        // ========== PAYSTACK HELPER (Public Key) ==========
+        function makePaystackPayment(email, amountInGHS, metadata, callback = null) {
+            const amountInPesewas = Math.round(amountInGHS * 100);
+            if (amountInPesewas < 100) {
+                alert('Minimum amount is GHS 1');
+                return false;
+            }
+            // REPLACE WITH YOUR ACTUAL PAYSTACK PUBLIC KEY (test or live)
+            const publicKey = 'pk_live_322e5d5775eb0e9ad30e1ab3aa81ae5949c62127'; // CHANGE THIS
+
+            const handler = PaystackPop.setup({
+                key: publicKey,
+                email: email,
+                amount: amountInPesewas,
+                currency: 'GHS',
+                metadata: metadata,
+                callback: function(response) {
+                    alert(`Payment complete! Reference: ${response.reference}`);
+                    if (callback) callback(response);
+                },
+                onClose: function() {
+                    alert('Payment window closed.');
+                }
+            });
+            handler.openIframe();
+            return true;
+        }
+
+        // ========== TICKET TOTAL UPDATE ==========
+        const ticketSelect = document.getElementById('ticketType');
+        const ticketQty = document.getElementById('ticketQty');
+        const totalSpan = document.getElementById('totalDisplay');
+
+        function updateTicketTotal() {
+            const price = parseInt(ticketSelect.value, 10);
+            let qty = parseInt(ticketQty.value, 10);
+            if (isNaN(qty) || qty < 1) qty = 1;
+            totalSpan.innerText = 'GHS ' + (price * qty);
+        }
+        ticketSelect.addEventListener('change', updateTicketTotal);
+        ticketQty.addEventListener('input', updateTicketTotal);
+        updateTicketTotal();
+
+        // ========== ORPHANAGE DONATION AMOUNT DISPLAY ==========
+        const customDonation = document.getElementById('customDonation');
+        const donationTotalSpan = document.getElementById('donationTotalDisplay');
+        const donorEmail = document.getElementById('donorEmail');
+        const donorName = document.getElementById('donorName');
+
+        function updateDonationDisplay() {
+            let amount = parseFloat(customDonation.value);
+            if (!isNaN(amount) && amount >= 1) {
+                donationTotalSpan.innerText = 'Donation: GHS ' + amount.toFixed(2);
+            } else {
+                donationTotalSpan.innerText = 'Enter amount above';
+            }
+        }
+        customDonation.addEventListener('input', updateDonationDisplay);
+
+        // ========== PAYMENT BUTTONS ==========
+        // Scholarship
+        document.getElementById('paystackScholarshipBtn').addEventListener('click', function() {
+            const name = document.getElementById('schName').value.trim();
+            const email = document.getElementById('schEmail').value.trim();
+            const phone = document.getElementById('schPhone').value.trim();
+            const region = document.getElementById('schRegion').value;
+
+            if (!name || !email || !phone) {
+                alert('Please fill name, email and phone for scholarship.');
+                return;
+            }
+
+            const amount = 50;
+            const metadata = {
+                custom_fields: [
+                    { display_name: "Full Name", variable_name: "full_name", value: name },
+                    { display_name: "Phone", variable_name: "phone", value: phone },
+                    { display_name: "Region", variable_name: "region", value: region },
+                    { display_name: "Purpose", variable_name: "purpose", value: "Scholarship (Backyard Kitchen)" }
+                ]
+            };
+            makePaystackPayment(email, amount, metadata);
+        });
+
+        // Ticket
+        document.getElementById('paystackTicketBtn').addEventListener('click', function() {
+            const phone = document.getElementById('ticketPhone').value.trim();
+            if (!phone) {
+                alert('Enter phone number for e-ticket delivery.');
+                return;
+            }
+            const price = parseInt(ticketSelect.value, 10);
+            let qty = parseInt(ticketQty.value, 10);
+            if (isNaN(qty) || qty < 1) qty = 1;
+            const totalAmount = price * qty;
+            const ticketText = ticketSelect.options[ticketSelect.selectedIndex].text;
+            const email = prompt('Enter your email address for ticket receipt:', 'customer@example.com');
+            if (!email) return;
+
+            const metadata = {
+                custom_fields: [
+                    { display_name: "Phone (e-ticket)", variable_name: "phone_ticket", value: phone },
+                    { display_name: "Ticket type", variable_name: "ticket", value: ticketText },
+                    { display_name: "Quantity", variable_name: "qty", value: qty.toString() }
+                ]
+            };
+            makePaystackPayment(email, totalAmount, metadata);
+        });
+
+        // Orphanage Donate
+        document.getElementById('paystackOrphanBtn').addEventListener('click', function() {
+            let amount = parseFloat(customDonation.value);
+            if (isNaN(amount) || amount < 1) {
+                alert('Please enter a valid donation amount (minimum GHS 1).');
+                return;
+            }
+            const donorNameVal = donorName.value.trim() || 'Anonymous';
+            const email = donorEmail.value.trim();
+            if (!email) {
+                alert('Email is needed for tax receipt / acknowledgment.');
+                return;
+            }
+            const metadata = {
+                custom_fields: [
+                    { display_name: "Donor name", variable_name: "donor_name", value: donorNameVal },
+                    { display_name: "Purpose", variable_name: "purpose", value: "Orphanage Donation" }
+                ]
+            };
+            makePaystackPayment(email, amount, metadata);
+        });
+
+        // Orphanage Apply
+        document.getElementById('paystackApplyBtn').addEventListener('click', function() {
+            const name = document.getElementById('applyName').value.trim();
+            const email = document.getElementById('applyEmail').value.trim();
+            const phone = document.getElementById('applyPhone').value.trim();
+            const location = document.getElementById('applyLocation').value.trim();
+            const message = document.getElementById('applyMessage').value.trim();
+
+            if (!name || !email || !phone || !location || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const amount = 50;
+            const metadata = {
+                custom_fields: [
+                    { display_name: "Applicant Name", variable_name: "applicant_name", value: name },
+                    { display_name: "Phone", variable_name: "phone", value: phone },
+                    { display_name: "Location", variable_name: "location", value: location },
+                    { display_name: "Need", variable_name: "need", value: message.substring(0, 50) },
+                    { display_name: "Purpose", variable_name: "purpose", value: "Orphanage Support Application" }
+                ]
+            };
+            makePaystackPayment(email, amount, metadata, function() {
+                // Clear form on success
+                document.getElementById('applyName').value = '';
+                document.getElementById('applyEmail').value = '';
+                document.getElementById('applyPhone').value = '';
+                document.getElementById('applyLocation').value = '';
+                document.getElementById('applyMessage').value = '';
+            });
+        });
+
+        // Promotion (no payment)
+        document.getElementById('promoSubmitBtn').addEventListener('click', function() {
+            const name = document.getElementById('promoName').value.trim();
+            const location = document.getElementById('promoLocation').value.trim();
+            const phone = document.getElementById('promoPhone').value.trim();
+
+            if (!name || !location || !phone) {
+                alert('Please fill in all fields to join the promotion.');
+                return;
+            }
+
+            alert(`Thank you ${name} from ${location}! You've been registered for the Onua TV promotion. We'll contact you on ${phone} if selected.`);
+            document.getElementById('promoName').value = '';
+            document.getElementById('promoLocation').value = '';
+            document.getElementById('promoPhone').value = '';
+        });
+
+        // Prevent form submit
+        document.getElementById('scholarshipForm').addEventListener('submit', (e) => e.preventDefault());
+
+        // ========== COMMENT FUNCTIONALITY (ADD & DELETE) ==========
+        const commentList = document.getElementById('commentListContainer');
+        const authorInput = document.getElementById('commentAuthor');
+        const textInput = document.getElementById('commentText');
+        const postBtn = document.getElementById('postCommentBtn');
+
+        // Load sample comments
+        function loadSampleComments() {
+            sampleComments.forEach((comment, index) => {
+                addComment(comment.author, comment.text, comment.time, `sample_${index}`);
+            });
+        }
+
+        function generateCommentId() {
+            return 'comment_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe.replace(/[&<>"']/g, function(m) {
+                if(m === '&') return '&amp;'; if(m === '<') return '&lt;'; if(m === '>') return '&gt;';
+                if(m === '"') return '&quot;'; if(m === "'") return '&#039;';
+                return m;
+            });
+        }
+
+        function addComment(author, text, time = 'just now', existingId = null) {
+            const id = existingId || generateCommentId();
+            const escapedAuthor = escapeHtml(author);
+            const escapedText = escapeHtml(text);
+            
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment-item';
+            commentDiv.id = id;
+            commentDiv.innerHTML = `
+                <div class="comment-header">
+                    <div class="comment-author"><i class="fas fa-user-circle"></i> ${escapedAuthor} <span class="admin-badge">visitor</span></div>
+                    <button class="delete-btn" onclick="deleteComment('${id}')"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+                <div class="comment-text">${escapedText}</div>
+                <div class="comment-time"><i class="far fa-clock"></i> ${time}</div>
+            `;
+            commentList.appendChild(commentDiv);
+        }
+
+        window.deleteComment = function(commentId) {
+            const commentElement = document.getElementById(commentId);
+            if (commentElement) {
+                if (confirm('Delete this comment? This cannot be undone.')) {
+                    commentElement.remove();
+                }
+            }
+        };
+
+        postBtn.addEventListener('click', function() {
+            const author = authorInput.value.trim();
+            const text = textInput.value.trim();
+            if (!author || !text) {
+                alert('Please enter your name and a comment.');
+                return;
+            }
+            addComment(author, text);
+            authorInput.value = '';
+            textInput.value = '';
+        });
+
+        textInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                postBtn.click();
+            }
+        });
+
+        // Initialize comments
+        loadSampleComments();
+    })();
+</script>
+</body>
+</html>
